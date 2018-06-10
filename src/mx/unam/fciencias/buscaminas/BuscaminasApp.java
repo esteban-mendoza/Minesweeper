@@ -62,16 +62,6 @@ public class BuscaminasApp extends Application {
         // Dificultades: elementos
         Label seleccionar = new Label();
         seleccionar.setText("Seleccione la dificultad:");
-        
-        Button pruebaBoton = new Button("Prueba para clase");
-        pruebaBoton.setOnAction(event -> {
-            // Comienza a medir tiempo
-            inicioJuego = System.nanoTime();
-
-            Buscaminas principiante = new Buscaminas(5,5);
-            Scene juego = new Scene(principiante.contenido());
-            ventana.setScene(juego);
-        });
 
         Button principianteBoton = new Button("Principiante");
         principianteBoton.setOnAction(event -> {
@@ -106,7 +96,6 @@ public class BuscaminasApp extends Application {
         // Dificultades: diseno y escena
         VBox disenoDificultades = new VBox(20);
         disenoDificultades.getChildren().addAll(seleccionar,
-                pruebaBoton,
                 principianteBoton,
                 intermedioBoton,
                 expertoBoton);
